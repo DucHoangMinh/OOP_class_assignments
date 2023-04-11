@@ -17,41 +17,45 @@ public class Order {
         this.qtyOrdered = qtyOrdered;
     }
     public void addDigitalVideoDisc(DigitalVideoDisc disc){
-        if(itemsOrdered.length >= 9){
-            //Xem laị điều kiện để biết mảng đã full!!!
+        if(qtyOrdered >= 9){
             System.out.println("The order is already full!!");
         }
         else{
-            itemsOrdered[itemsOrdered.length] = disc;
-            System.out.println("Phan tu da duoc luu tru");
+            itemsOrdered[qtyOrdered] = disc;
+            qtyOrdered += 1;
         }
     }
     public void removeDigitalVideoDisc(DigitalVideoDisc disc){
-        int arrLength = itemsOrdered.length;
         String discString = disc.toString();
         int deleteIndex = -1;
-        for(int i = 0; i < arrLength ; i++){
+        for(int i = 0; i < qtyOrdered ; i++){
             if(itemsOrdered[i].toString().equals(discString)){
                 deleteIndex = i;
             }
         }
         if(deleteIndex >= 0){
-            for(int j = deleteIndex; j < arrLength - 1; j++){
+            for(int j = deleteIndex; j < qtyOrdered - 1; j++){
                 itemsOrdered[j] = itemsOrdered[j + 1];
             }
-            itemsOrdered[arrLength - 1] = null;
-            System.out.println("Phan tu da duoc xoa");
+            itemsOrdered[qtyOrdered - 1] = null;
+            qtyOrdered -= 1;
+            System.out.printf("Phan tu %s da duoc xoa\n",disc.toString());
         }
         else {
             System.out.println("Khong tim thay phan tu tuong ung de xoa");
         }
     }
     public double totalCost(){
-        int arrLength = itemsOrdered.length;
         double sumCost = 0;
-        for(int i = 0; i < arrLength; i ++){
+        for(int i = 0; i < qtyOrdered; i ++){
             sumCost += itemsOrdered[i].getCost();
         }
         return sumCost;
+    }
+    public void printItem(){
+        for(int i = 0; i < qtyOrdered; i ++){
+            String tempItem = itemsOrdered[i].toString();
+            System.out.println(tempItem);
+        }
     }
 }

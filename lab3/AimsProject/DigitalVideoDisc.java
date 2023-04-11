@@ -8,7 +8,7 @@ public class DigitalVideoDisc {
     private String category;
     private String director;
     private int length;
-    private float cost;
+    private double cost;
     //Tạo getter và setter cho các attribute
     public String getTitle(){
         return this.title;
@@ -40,11 +40,11 @@ public class DigitalVideoDisc {
         this.length = length;
     }
 
-    public float getCost() {
+    public double getCost() {
         return this.cost;
     }
 
-    public void setCost(float cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
     //Tạo constructor
@@ -64,7 +64,7 @@ public class DigitalVideoDisc {
         this.category = category;
         this.director = director;
     }
-    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+    public DigitalVideoDisc(String title, String category, String director, int length, double cost) {
         super();
         this.title = title;
         this.category = category;
