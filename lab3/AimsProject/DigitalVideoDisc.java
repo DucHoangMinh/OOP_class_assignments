@@ -76,13 +76,9 @@ public class DigitalVideoDisc {
 
     @Override
     public String toString() {
-        return "{" +
-            " title='" + getTitle() + "'" +
-            ", category='" + getCategory() + "'" +
-            ", director='" + getDirector() + "'" +
-            ", length='" + getLength() + "'" +
-            ", cost='" + getCost() + "'" +
-            "}";
+        return "DVD - " + title + " - " + category
+            + " - " + director + " - " + length
+            + ": " + cost + "$";
     }
 
 }

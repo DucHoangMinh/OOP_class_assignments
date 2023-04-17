@@ -101,7 +101,7 @@ public class MyDate {
     }
 
     //Phương thức printDate để in ra một ngày bất kỳ được truyền vào
-    public void printDate(MyDate mydate){
+    public void print(MyDate mydate){
         System.out.print("Ngay hien tai la : ");
         System.out.printf("%d / %d / %d\n",mydate.day,mydate.month,mydate.year);
     }
