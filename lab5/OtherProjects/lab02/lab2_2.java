@@ -1,5 +1,5 @@
 // Write a program for input/output from keyboard
-package lab2;
+package lab02;
 import java.util.Scanner;
 public class lab2_2 {
     public static String outputInfor(String name,int age,String gender,String hometown){

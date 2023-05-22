@@ -1,11 +1,7 @@
-package lab05.AimsProject;
-
-// The Order class will contain a list of DigitalVideoDisc 
-// objects and have methods capable of modifying the list
-//Hàm xóa một phần tử trong danh sách
+package aims;
 import java.util.Date;
 public class Order {
-    public static final int MAX_NUMBERS_ORDERED = 10;
+	public static final int MAX_NUMBERS_ORDERED = 10;
     private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered  = 0;
     //Getter và Setter cho trường qtyOrdered
@@ -119,5 +115,10 @@ public class Order {
         }
         System.out.println("Cost : " + totalCost());
         System.out.println("**************************************************");
+    }
+    public DigitalVideoDisc getALuckyItem(){
+        int randomIndex = (int) Math.floor(Math.random()) * qtyOrdered;
+        itemsOrdered[randomIndex].setCost(0);
+        return itemsOrdered[randomIndex];
     }
 }

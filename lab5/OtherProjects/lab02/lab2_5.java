@@ -1,4 +1,4 @@
-package lab2;
+package lab02;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 public class lab2_5 {

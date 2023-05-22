@@ -1,3 +1,5 @@
+package lab01;
+
 import javax.swing.JOptionPane;
 public class lab1_6 {
     //Ham giai phuong trinh bac nhat mot an

@@ -1,10 +1,9 @@
-package lab05.AimsProject;
+package aims;
 
 import java.util.Properties;
 
 public class DigitalVideoDisc {
-    
-    private String title;
+	private String title;
     private String category;
     private String director;
     private int length;
@@ -80,5 +79,14 @@ public class DigitalVideoDisc {
             + " - " + director + " - " + length
             + ": " + cost + "$";
     }
-
+    
+    public boolean search(String title){
+        String titleStr[] = title.split(" ");
+        for(int i = 0; i < titleStr.length;i++){
+            if(this.title.toLowerCase().contains(titleStr[i].toLowerCase()) == false){
+                return false;
+            }   
+        }
+        return true;
+    }
 }

@@ -1,13 +1,12 @@
-package lab05.AimsProject;
+package aims;
+
 import java.util.Date;
 import javax.management.openmbean.OpenType;
 import javax.print.event.PrintEvent;
 import javax.swing.JTable.PrintMode;
 import java.util.Scanner;
-
 public class Aims {
-
-    public static void printMenu(){
+	public static void printMenu(){
         System.out.println("\tMENU");
         System.out.println("1.Xem danh sach cac dvd dang duoc luu");
         System.out.println("2.Them mot dvd vao danh sach");

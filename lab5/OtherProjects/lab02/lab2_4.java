@@ -1,4 +1,4 @@
-package lab2;
+package lab02;
 import java.util.Scanner;
 public class lab2_4 {
     //Ham in ra mot tam giac co chieu cao n dong
